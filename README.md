@@ -29,11 +29,9 @@ AWS CLI configured with IAM permissions.
 A terraform.tfvars file created locally (not in Git) to store db_username and db_pass.
 
 2. Initialization
-Bash
 terraform init
 
 3. Execution
-Bash
 # Preview the infrastructure changes
 terraform plan
 
@@ -46,4 +44,4 @@ Module Decoupling: Designed the DB module to accept allowed_security_groups as a
 Fargate Networking: Resolved critical 503 Service Unavailable errors by correctly mapping the ALB Target Group to ip type to support Fargate's ENI-based networking.
 State Integrity: Configured S3 for remote state storage to ensure a single source of truth for the infrastructure.
 
-📬 Connect with MeAkshay - https://www.linkedin.com/in/akshay-krishna-0k/
+📬 Connect with Me Akshay - https://www.linkedin.com/in/akshay-krishna-0k/

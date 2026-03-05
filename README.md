@@ -22,7 +22,7 @@ The project follows a "Conductor" pattern where the root configuration orchestra
 ---
 
 ## 📂 Repository Structure
-
+```text
 web-portal-project/
 ├── main.tf                 # The "Conductor" - Connects all modules
 ├── variables.tf            # Global variables (Region, Project Name)
@@ -34,6 +34,7 @@ web-portal-project/
     ├── alb/                # Load Balancing: ALB, Listeners, Target Groups
     ├── ecs_app/            # Compute: ECS Cluster, Task Def, Service
     └── db/                 # Data: RDS Cluster, Instances, Security Groups
+
 
 🛠️ Technical Skill Set DemonstratedCategoryTools/Features UsedIaCTerraform (Modules, Remote State Locking, Input/Output Mapping)CloudAWS (VPC, ECS Fargate, RDS, ALB, IAM)SecurityLeast Privilege IAM, Security Group Chaining, Private SubnetsSRE FocusRoot Cause Analysis (RCA) on 503 errors, State Consistency, Idempotency🚀 Deployment Guide1. PrerequisitesTerraform v1.0+ installed.AWS CLI configured with IAM permissions.A terraform.tfvars file created locally (not in Git) to store db_username and db_pass.2.
 

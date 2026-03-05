@@ -34,18 +34,24 @@ web-portal-project/
     ├── alb/                # Load Balancing: ALB, Listeners, Target Groups
     ├── ecs_app/            # Compute: ECS Cluster, Task Def, Service
     └── db/                 # Data: RDS Cluster, Instances, Security Groups
-
+'''
 
 🛠️ Technical Skill Set DemonstratedCategoryTools/Features UsedIaCTerraform (Modules, Remote State Locking, Input/Output Mapping)CloudAWS (VPC, ECS Fargate, RDS, ALB, IAM)SecurityLeast Privilege IAM, Security Group Chaining, Private SubnetsSRE FocusRoot Cause Analysis (RCA) on 503 errors, State Consistency, Idempotency🚀 Deployment Guide1. PrerequisitesTerraform v1.0+ installed.AWS CLI configured with IAM permissions.A terraform.tfvars file created locally (not in Git) to store db_username and db_pass.2.
 
 Initialization
+'''bash
 terraform init
+'''
 
 3. ExecutionBash# Preview the infrastructure changes
+'''bash
 terraform plan
+'''
 
 # Deploy to AWS
+'''bash
 terraform apply
+'''
 
 💡 Engineering Insights (The "SRE" Journey)Module Decoupling: Designed the DB module to accept allowed_security_groups as a variable, ensuring the database is never exposed to the public internet.Fargate Networking: Resolved critical 503 Service Unavailable errors by correctly mapping the ALB Target Group to ip type to support Fargate's ENI-based networking.State Integrity: Configured S3 for remote state storage to ensure a single source of truth for the infrastructure.
 

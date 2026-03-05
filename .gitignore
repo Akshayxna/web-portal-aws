@@ -1,0 +1,11 @@
+# General Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+*.tfvars.json
+
+# Credentials & Sensitive info
+.aws/
+.env
+auth.json
